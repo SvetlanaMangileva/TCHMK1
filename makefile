@@ -1,2 +1,2 @@
 all:
-	g++ TCHMK1.cpp -o TCHMK1 -lm
+	gcc main.c tchmk.c -o 1lab -lm -w
