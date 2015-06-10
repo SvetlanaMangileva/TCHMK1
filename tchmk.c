@@ -534,7 +534,14 @@ struct LongNumber DIV(struct LongNumber a, struct LongNumber b, int sumbols)
 		else
 			return a;
     }
-
+	if (compare(a,b)==0)
+	{
+		struct LongNumber res;
+		res.size = 1;
+		res = allocate(res, res.size);
+		res.pointer[0] = 1;		
+			return res;
+	}
     if (b.size == 1)
     {
 		if (b.pointer[0] == 0)
