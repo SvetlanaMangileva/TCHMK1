@@ -52,7 +52,7 @@ char* PrintNumber(struct LongNumber number)
 		number = Normalize(number);
 	}
 
-	decimal = Normalize(decimal);
+	//decimal = Normalize(decimal);
 
 	char *string = NULL;
 	j = 0;
@@ -117,7 +117,7 @@ struct LongNumber ReadString(const char* num)
 			carry = tmp - number.pointer[i] * 2;
 		}
 
-		number = Normalize(number);
+	//	number = Normalize(number);
 
 		bin.pointer[j] = ((current << x) * carry) | bin.pointer[j];
 
@@ -132,7 +132,7 @@ struct LongNumber ReadString(const char* num)
 
 	number = clear(number);
 
-	bin = Normalize(bin);
+//	bin = Normalize(bin);
 
 	return bin;
 }
@@ -265,7 +265,7 @@ struct LongNumber ReadTextFile(const char* file)
 			carry = tmp - number.pointer[i] * 2;
 		}
 
-		number = Normalize(number);
+	//	number = Normalize(number);
 
 		bin.pointer[j] = ((current << x) * carry) | bin.pointer[j];
 
@@ -280,7 +280,7 @@ struct LongNumber ReadTextFile(const char* file)
 
 	number = clear(number);
 
-	bin = Normalize(bin);
+//	bin = Normalize(bin);
 
 	return bin;
 }
@@ -319,7 +319,7 @@ void WriteTextFile(const char* file, struct LongNumber number)
 		number = Normalize(number);
 	}
 
-	decimal = Normalize(decimal);
+//	decimal = Normalize(decimal);
 
 	for (i = decimal.size - 1 ; i > -1; i--)
 			fprintf(out, "%c", decimal.pointer[i]);
@@ -723,14 +723,14 @@ struct LongNumber SmallDIV(struct LongNumber a, unsigned long long int b)
 
 struct LongNumber Normalize(struct LongNumber a)
 {
-	unsigned int i = a.size-1;
+//	unsigned int i = a.size-1;
 
-	while ( (i>0) && (a.pointer[i]==0) ) 
-		i--;
+//	while ( (i>0) && (a.pointer[i]==0) ) 
+//		i--;
 
-	a.size = i+1;
+//	a.size = i+1;
 
-	return a;
+//	return a;
 }
 
 
